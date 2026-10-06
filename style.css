@@ -1,0 +1,773 @@
+/* =====================================================
+   DOMPETKUU - CSS
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --background: #f4f7fb;
+    --card: #ffffff;
+    --text: #172033;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --income: #16a34a;
+    --expense: #dc2626;
+    --warning: #f59e0b;
+    --shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+
+    min-height: 100vh;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.topbar {
+    width: 100%;
+
+    background: var(--primary);
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow:
+        0 4px 15px rgba(37, 99, 235, 0.25);
+}
+
+.topbar h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   THEME BUTTON
+===================================================== */
+
+.icon-btn {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: min(1100px, 92%);
+    margin: 30px auto;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    padding: 22px;
+    margin-bottom: 22px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =====================================================
+   BALANCE
+===================================================== */
+
+.balance-card {
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    color: white;
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.25);
+}
+
+.balance-card span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.balance-card h2 {
+    font-size: 34px;
+    margin-top: 8px;
+}
+
+.wallet-icon {
+    font-size: 45px;
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    box-shadow: var(--shadow);
+}
+
+.stat-card span {
+    display: block;
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    margin-bottom: 9px;
+}
+
+.stat-card strong {
+    font-size: 20px;
+}
+
+.income-card strong {
+    color: var(--income);
+}
+
+.expense-card strong {
+    color: var(--expense);
+}
+
+
+/* =====================================================
+   SECTION LABEL
+===================================================== */
+
+.section-label {
+    display: inline-block;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    color: var(--primary);
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.indicator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.indicator-header h2 {
+    font-size: 24px;
+}
+
+.status-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+    color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin: 18px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+.status-description {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.status-scale {
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   ANALYSIS
+===================================================== */
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.analysis-summary {
+    margin-top: 15px;
+
+    display: grid;
+    gap: 7px;
+}
+
+.analysis-summary p {
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   TRANSACTION TYPE
+===================================================== */
+
+.transaction-type {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin: 20px 0;
+}
+
+.type-btn {
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    color: var(--text);
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border 0.2s;
+}
+
+.type-btn:hover {
+    border-color: var(--primary);
+}
+
+.type-btn.active {
+    background: var(--primary);
+    color: white;
+
+    border-color: var(--primary);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 16px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    background: var(--card);
+    color: var(--text);
+
+    border-radius: 11px;
+
+    padding: 13px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border 0.2s,
+        box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =====================================================
+   NOMINAL
+===================================================== */
+
+.input-money {
+    display: flex;
+    align-items: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    overflow: hidden;
+
+    background: var(--card);
+}
+
+.input-money span {
+    padding-left: 13px;
+
+    font-weight: bold;
+
+    color: var(--muted);
+}
+
+.input-money input {
+    border: none;
+    border-radius: 0;
+
+    box-shadow: none;
+
+    background: transparent;
+}
+
+.input-money input:focus {
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   HIDDEN
+===================================================== */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.submit-btn {
+    width: 100%;
+
+    border: none;
+
+    background: var(--primary);
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.1s;
+}
+
+.submit-btn:hover {
+    background: var(--primary-dark);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =====================================================
+   HISTORY
+===================================================== */
+
+.history-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.danger-btn {
+    border: none;
+
+    background: #fee2e2;
+    color: #b91c1c;
+
+    padding: 9px 13px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   TRANSACTION ITEM
+===================================================== */
+
+.transaction-item {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+}
+
+.transaction-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.transaction-info strong {
+    word-break: break-word;
+}
+
+.transaction-info span,
+.transaction-info small {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.transaction-right {
+    text-align: right;
+
+    flex-shrink: 0;
+}
+
+.transaction-right strong {
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.transaction-item.income
+.transaction-right strong {
+    color: var(--income);
+}
+
+.transaction-item.expense
+.transaction-right strong {
+    color: var(--expense);
+}
+
+.delete-btn {
+    border: none;
+
+    background: #fee2e2;
+    color: #b91c1c;
+
+    padding: 6px 9px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.empty-state {
+    text-align: center;
+
+    padding: 35px 15px;
+
+    color: var(--muted);
+}
+
+.empty-state div {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    margin-bottom: 7px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    text-align: center;
+
+    color: var(--muted);
+
+    padding: 20px;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark-mode {
+    --background: #0f172a;
+    --card: #172033;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --border: #263449;
+    --shadow:
+        0 8px 25px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .status-icon {
+    background: #1e293b;
+}
+
+body.dark-mode .danger-btn {
+    background: #3f1d1d;
+    color: #fca5a5;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .topbar {
+        padding: 17px;
+    }
+
+    .topbar h1 {
+        font-size: 19px;
+    }
+
+    .balance-card {
+        padding: 22px;
+    }
+
+    .balance-card h2 {
+        font-size: 27px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card strong {
+        font-size: 17px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .transaction-item {
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transaction-type {
+        grid-template-columns: 1fr;
+    }
+
+    .history-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
